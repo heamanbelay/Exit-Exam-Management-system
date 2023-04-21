@@ -2,9 +2,10 @@ import { Routes, Route } from "react-router-dom"
 import Home from "./components/Auth/home.jsx";
 import RegistrationForm from './components/Auth/register.jsx';
 import LoginForm from "./components/Auth/login";
-import Quiz from "./components/quiz.jsx";
-import Result from "./components/result.jsx";
-
+import Quiz from "./components/Quizz/quiz.jsx";
+import Result from "./components/Quizz/result.jsx";
+import Main from "./components/Quizz/main.jsx";
+import "./components/Quizz/styles/app.css"
 function App() {
   return (
     <div className="App">
@@ -12,8 +13,9 @@ function App() {
         <Route path="/" element={ <Home/> } />
         <Route path="register" element={ <RegistrationForm/> } />
         <Route path="login" element={ <LoginForm/> } />
-        <Route path="quiz" element={ <Quiz/> } />
+        <Route path="main/quiz" element={ <Quiz/> } />
         <Route path="result" element={ <Result/> } />
+        <Route path="main" element={ <Main/> } />
 
       </Routes>
     </div>

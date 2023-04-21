@@ -20,12 +20,7 @@ function RegistrationForm() {
           <br></br>
               <div className="username">
                   {/* <label className="form__label" for="firstName">First Name </label> */}
-                  <input className="form__input" type="text" id="firstName" placeholder="Enter your First Name"/>
-              </div>
-
-              <div className="lastname">
-                  {/* <label className="form__label" for="lastName">Last Name </label> */}
-                  <input  type="text" name="" id="lastName"  className="form__input"placeholder="Enter your Last Name"/>
+                  <input className="form__input" type="text" id="firstName" placeholder="Enter your Full Name"/>
               </div>
 
               <div className="email">
