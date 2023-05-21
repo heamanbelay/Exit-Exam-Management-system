@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root{
-  --primary-color: lightblue;
-  /* --dark-color:; */
+  --primary-color: rgb(60, 123, 145);
+  --dark-color:black;
   /* --light-color: #f0f0f0; */
 }
 
 body, html{
   height: 100%;
-  background: var(--dark-color)
 }
 
 * > *{
@@ -25,11 +24,11 @@ body, html{
 }
 
 .container .title{
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
-    border: 5px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
     padding: .3em .2em;
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .text-light {
@@ -63,10 +62,11 @@ body, html{
 
 
 .container .btn{
-    padding: .2em 1.7em;
+    padding: .1.7em 1.7em;
     border: none;
     border-radius: .1em;
     font-size: 1.2em;
+    width: 25%;
 }
 
 .container .btn:hover{
@@ -75,24 +75,57 @@ body, html{
     color: #202020;
 }
 
-.next{
+/* .nxt_btn{
     background-color: var(--primary-color);
     justify-self: flex-end;
+} */
+
+.prev_btn {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: -30px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  justify-self: flex-end;
+  position: absolute;
+  bottom: 80px;
+  left: 30px;
+
 }
 
-.prev{
-    background-color: #faff5a;
-    justify-self: flex-start;
+.prev_btn:hover, .nxt_btn:hover {
+  background-color: rgb(148, 148, 156);
 }
-
+.nxt_btn{
+  background-color: var(--primary-color);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: -30px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 80px;
+  right: 30px;
+}
 ul li{
-  color: #AAAAAA;
+  color: black;
   display: block;
   position: relative;
   float: left;
   width: 100%;
   height: 100px;
-	border-bottom: 1px solid #333;
+	/* border-bottom: 1px solid #333; */
 }
 
 ul li input[type=radio]{
@@ -114,7 +147,7 @@ ul li label{
 }
 
 ul li:hover label{
-	color: #FFFFFF;
+	color: black
 }
 
 ul li .check{
@@ -132,7 +165,7 @@ ul li .check{
 }
 
 ul li:hover .checked {
-  border: 5px solid #FFFFFF;
+  border: 5px solid blue;
 }
 
 ul li .check::before {
@@ -169,4 +202,20 @@ input[type=radio]:checked ~ .text-primary{
 
 .checked::before{
   background: var(--primary-color)
+}
+.userid{
+  background-color: whitesmoke;
+  height: 3px;
+  width: 50%;
+  border: none;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 5%;
+  padding: 2vmax;
+  justify-content: space-evenly;
+  transition: all 0.5s;
+  font-size: 100%;
 }

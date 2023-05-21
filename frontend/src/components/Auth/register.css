@@ -11,7 +11,7 @@
     background-position-x: 5%;
     background-size: 88vh;
     position: fixed;
-    top: 0%;
+    top: 10%;
     left: 0;
 }
 .form-body{
@@ -22,7 +22,7 @@
     margin-right: 17%;
     left: 0;
     width: 30vw;
-    height: 80vh;
+    height: 100vh;
     background-size: 100vh;
     overflow: hidden;
     box-shadow: 15px 15px 15px rgba(219, 213, 213, 0.2), 
@@ -51,7 +51,7 @@
 
 }
 .head{
-    color:lightblue;
+    color:rgb(81, 152, 179);
 }
 .form-body > *{
     padding: 5px;
@@ -93,27 +93,39 @@
     font-size: 100%;
 
 }
-.btn:hover,
 .btn{
     align-items: center;
     border: none;
-    background-color:lightblue;
+    background-color:rgb(81, 152, 179);
     color: white;
     font: 300 1.8vmax "Roboto";
     width: 50%;
-    padding: 0.8vmax;
+    /* padding: 0.8vmax; */
     cursor: pointer;
     transition: all 0.5s;
     margin: auto;
-    margin-top: 5%;
-    border-radius: 4px;
+    /* margin-top: 5%;
+    border-radius: 4px; */
     background-position-y: 10%;
     background-position-x: 10%;
     display: flex;
     justify-content: center;
     outline: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.219);
+    margin-top: 20px;
+    padding: 10px 20px;
+    
 }
+.btn:hover{
+    cursor: pointer;
+    background-color: #f0f0f0;
+    color: #202020;
+}
+ /* .pp{
+    margin: auto;
+    margin-top: 5%;
+
+  } */
 /* .btn > h3:hover {
     color: #7B02EA;
   } */
@@ -131,3 +143,75 @@
     
     text-align: center;
 } */
+#registerImage > img {
+    width: 3vmax;
+    border-radius: 100%;
+    margin-left: 5px;
+    margin: auto;
+    margin-top: -30%;
+  }
+  #registerImage > input {
+    display: flex;
+    padding: 0%;
+    margin-left: 5px;
+    margin: auto;
+    margin-top: -30%;
+    
+  }
+  
+  #registerImage > input::file-selector-button {
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    height: 5vh;
+    border: none;
+    margin: auto;
+    margin-top: 40%;
+    font: 400 0.8vmax cursive;
+    transition: all 0.5s;
+    padding: 0 1vmax;
+    color: rgba(0, 0, 0, 0.623);
+    background-color: rgb(255, 255, 255);
+  }
+  
+  #registerImage > input::file-selector-button:hover {
+    background-color: rgb(235, 235, 235);
+  }
+.select-arrow {
+  right: 100px;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 5px 5px 0 5px;
+  border-color: #000 transparent transparent transparent;
+  margin: auto;
+  /* margin-top: 50%; */
+  /* margin-bottom: 89%; */
+  margin-left: 67%;
+  padding-top: 18%;
+}
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background-color: whitesmoke;
+    /* height: %; */
+    width:  63%;
+    border: none;
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    margin-top: -12px;
+    padding: 2vmax;
+    justify-content: space-evenly;
+    transition: all 0.5s;
+    font-size: 100%;
+    
+  }

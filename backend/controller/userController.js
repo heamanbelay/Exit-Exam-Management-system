@@ -1,5 +1,5 @@
 const User = require("../model/userModel");
-const ErrorHandler = require("../utils/ErrorHandler.js");
+// const ErrorHandler = require("../utils/ErrorHandler.js");
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 
 exports.createUser = catchAsyncErrors(async (req, res, next) => {

@@ -3,7 +3,7 @@ const validator = require("validator");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
-const ErrorHandler = require("../utils/ErrorHandler");
+// const ErrorHandler = require("../utils/ErrorHandler");
 
 
 const userSchema = new mongoose.Schema({
