@@ -32,7 +32,7 @@ export default function Result() {
 
       <div className='result flex-center'>
          <div className='flex'>
-               <span>UserName :</span>
+               <span>Student ID :</span>
                <span className='bold'>{userId || ""}</span>
 
          </div>

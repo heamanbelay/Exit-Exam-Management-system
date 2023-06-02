@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './QuestionForm.css';
 
+// import axios from "axios";
 const QuestionForm = () => {
   const [question, setQuestion] = useState({ text: '', isImage: false });
   const [options, setOptions] = useState([
@@ -92,12 +93,65 @@ const QuestionForm = () => {
       setQuestions(questions.filter((_, i) => i !== index));
     }
   };
+//   axios.post('/api/questions', {
+//     question: 'What is your favorite color?',
+//     answer: 'My favorite color is blue.'
+//   })
+//   .then(function(response) {
+//     console.log(response.data);
+//   })
+//   .catch(function(error) {
+//     console.log(error);
+//   });
+//   const handleFormSubmit = () => {
+//       // Send the questions to the chairperson's page
+//       fetch('https://localhost:3000/api/questions', {
+//         method: 'POST',
+//         headers: {
+//           'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(questions)
+//       })
+//       .then(response => {
+//         if (response.ok) {
+//           // Handle success
+//           console.log('Questions submitted successfully');
+//         } else {
+//           // Handle error
+//           console.error('Error submitting questions');
+//         }
+//       })
+//       .catch(error => {
+//         // Handle error
+//         console.error('Error submitting questions', error);
+// });
+// };
+ const handleFormSubmit = () => {
+      // Get the values of the question and answer input fields
+      // var question = document.getElementById("question").value;
+      // var answer = document.getElementById("answer").value;
+
+//       var question = document.querySelector("#question").value;
+//       var answer = document.querySelector("#answer").value;
+
+//       // Add the question to the list of questions
+//       var questionList = document.querySelector("questionList");
+//       var newQuestion = document.createElement("li");
+//       newQuestion.innerHTML = "<strong>Question:</strong> " + question + "<br><strong>Answer:</strong> " + answer;
+//       questionList.appendChild(newQuestion);
+
+//       // Clear the input fields
+//       document.querySelector("#question").value = "";
+//       document.querySelector("#answer").value = "";
+    
+ }
 
   const renderOption = (option, index) => {
     return (
       <div key={index}>
-        <label htmlFor={`option${index + 1}`}>Option {index + 1}:</label>
+        <label htmlFor={`option${index + 1}`} className='texts'>Option {index + 1}:</label>
         <select
+          className='type'
           id={`option${index + 1}`}
           value={option.isImage ? 'image' : 'text'}
           onChange={(e) =>
@@ -111,6 +165,7 @@ const QuestionForm = () => {
         {option.isImage ? (
           <div>
             <input
+              className='type'
               type="text"
               id={`optionImage${index + 1}`}
               placeholder="Image URL"
@@ -132,13 +187,17 @@ const QuestionForm = () => {
         <br />
       </div>
     );
+    
+  
   };
 
   return (
     <div className="question-form-container">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="question">Question:</label>
+
+        <label htmlFor="question" className='texts'>Question:</label>
         <select
+          className='type'
           id="questionType"
           value={question.isImage ? 'image' : 'text'}
           onChange={(e) =>
@@ -167,7 +226,7 @@ const QuestionForm = () => {
         {formErrors.question && <div className="error">{formErrors.question}</div>}
         <br />
         {options.map(renderOption)}
-        <label htmlFor="correctAnswer">Correct Answer:</label>
+        <label htmlFor="correctAnswer" className='texts'>Correct Answer:</label>
         <select
           id="correctAnswer"
           value={correctAnswer}
@@ -229,6 +288,8 @@ const QuestionForm = () => {
           </tbody>
         </table>
       )}
+      {questions.length > 0 && <button onClick={handleFormSubmit}>Submit Questions</button>}
+
     </div>
   );
 };

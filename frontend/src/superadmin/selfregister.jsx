@@ -24,7 +24,7 @@ export default function SelfSuperRegister() {
   };
 
   const validationSchema = Yup.object().shape({
-    username: Yup.string().required('Username is required'),
+    username: Yup.string().required('Name is required'),
     email: Yup.string().email('Invalid email').required('Email is required'),
     password: Yup.string().required('Password is required'),
     confirmPassword: Yup.string()

@@ -56,18 +56,22 @@ import TeachRegistrationForm from './stream_chair/addTeachers.jsx';
 // import TeachRegistrationForm from './teachers/register.jsx';
 import SupRegistrationForm from './superadmin/super_register.jsx';
 import Chairhome from './stream_chair/chairhome.jsx';
-import RegisterForm from './components/Auth/register.jsx';
+// import RegisterForm from './components/Auth/register.jsx';
 import SelfSuperRegister from './superadmin/selfregister.jsx';
+import ExamForm from './stream_chair/createExam.jsx';
+import QueList from './stream_chair/questionlist.jsx';
+import Studlist from './stream_chair/studlist.jsx';
+import Teachlist from './stream_chair/teachlist.jsx';
 
 const router = createBrowserRouter([
   {
     path : '/',
     element : <Home></Home>
   },
-  {
-    path : '/register',
-    element : <RegisterForm ></RegisterForm>
-  },
+  // {
+  //   path : '/register',
+  //   element : <RegisterForm ></RegisterForm>
+  // },
   {
     path : '/login',
     element : <LoginForm></LoginForm>
@@ -93,12 +97,16 @@ const router = createBrowserRouter([
     element : <SupRegistrationForm ></SupRegistrationForm>
   },
   {
+    path : '/self_register',
+    element : <SelfSuperRegister ></SelfSuperRegister>
+  },
+  {
     path : '/faculity_register',
     element : <FaculRegistrationForm ></FaculRegistrationForm>
   },
   {
     path : '/dept_register',
-    element : < DeptRegistrationForm></DeptRegistrationForm>
+    element : <DeptRegistrationForm></DeptRegistrationForm>
   },
   {
     path : '/chairhome',
@@ -112,9 +120,22 @@ const router = createBrowserRouter([
     path : '/chairhome/teach_register',
     element : <TeachRegistrationForm ></TeachRegistrationForm>
   },
+ 
   {
-    path : '/self_register',
-    element : <SelfSuperRegister ></SelfSuperRegister>
+    path : '/chairhome/examform',
+    element : <ExamForm ></ExamForm>
+  },
+  {
+    path : '/chairhome/list',
+    element : <QueList ></QueList>
+  },
+  {
+    path : '/chairhome/listofstud',
+    element : <Studlist ></Studlist>
+  },
+  {
+    path : '/chairhome/listofteach',
+    element : <Teachlist ></Teachlist>
   },
   ])
 function App() {
@@ -126,3 +147,4 @@ function App() {
   );
 }
 export default App;
+
