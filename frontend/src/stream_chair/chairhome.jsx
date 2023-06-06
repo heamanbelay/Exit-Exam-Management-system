@@ -1,32 +1,10 @@
-// import React, { useState } from 'react'
-// import { Link } from "react-router-dom";
-// import  '../style/chair.css'
-// import QuestionForm from '../teachers/upload_que';
-// import QuestionTable from '../teachers/quetable';
-// const Chairhome = () => {
-//   const [questions, setQuestions] = useState([]);
 
-//   return (
-//     <div>
-//         <h3>chairhome</h3>
-//         <Link to="/chairhome/teach_register"><button type="submit"  className="">add Teachers</button></Link> 
-//         <Link to="/chairhome/stud_register"><button type="submit"  className="">add Students</button></Link> 
-//         <Link to="/chairhome/examform"><button type="submit"  className="">Set the Exam</button></Link> 
-
-//         {/* <QuestionForm questions={questions} setQuestions={setQuestions} /> */}
-//         <QuestionTable questions={questions} /> 
-
-//     </div>
-//   )
-// }
-
-// export default Chairhome
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import  '../style/chair.css'
 import QuestionForm from '../teachers/upload_que';
-import QuestionTable from '../teachers/quetable';
 import ListofUsers from './listofusers';
+import QuestionTable from '../teachers/quetable';
 import Header from '../components/Auth/header';
 import { Visibility } from "@material-ui/icons";
 import {

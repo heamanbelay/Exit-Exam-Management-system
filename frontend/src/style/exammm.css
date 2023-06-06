@@ -49,10 +49,10 @@ form
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
 } */
 /* exammm.css */
-form-body {
+/* form-body {
   text-align: left;
-}
-.form-label {
+} */
+/* .form-label { */
  /* width: 150px;
   text-align: right;
   transform: translateY(-100%) translateX(-100vmax);
@@ -62,25 +62,24 @@ form-body {
   margin-top: -10%; */
 
   /* width: 80%; */
-  background-color: white;
+  /* background-color: white;
   background: none;
   box-sizing: border-box;
   display: flex;
   justify-content: center;
   padding: 3px;
-  /* background-color: whitesmoke; */
+  background-color: whitesmoke; */
 
   /* margin-bottom: 3px; */
-  box-shadow: 15px 15px 15px white, 
+  /* box-shadow: 15px 15px 15px white, 
     -15px 15px 15px white;
-  border-radius: 10px; 
+  border-radius: 10px;  */
   /* background-color: white; */
 
-}
 
-.form-control {
+/* .form-control {
   font-size: 100%;
-}
+} */
  /* border-radius: 0;
  text-align: left;
  padding: 20px 20px;
@@ -121,7 +120,7 @@ form-body {
 } */
 
 /* Center the form */
-form {
+/* form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,9 +128,9 @@ form {
   padding: 20px 20px;
   border: 2px solid #0000001a;
   padding: 10px;
-  margin-right: 17%;
+  margin-right: 17%; */
   /* margin-top: ; */
-  left: 0;
+  /* left: 0;
   width: 50vw;
   height: 90vh;
   background-size: 100vh;
@@ -140,12 +139,12 @@ form {
     -15px 15px 15px rgba(0,0,0,0.1);
   border-radius: 10px;
   background: none;
-}
-.foorm{
+} */
+/* .foorm{
   
-}
+} */
 /* Align form fields to the right */
-.form-group {
+/* .form-group {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -155,8 +154,8 @@ form {
 
 .form-group label {
   margin-right: 1rem;
-}
-.btn {
+} */
+/* .btn {
   align-items: center;
   border: none;
   background-color: rgb(81, 152, 179);
@@ -179,4 +178,4 @@ form {
   cursor: pointer;
   background-color: #f0f0f0;
   color: #202020;
-}
+} */

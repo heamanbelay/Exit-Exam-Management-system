@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-export default function DeptRegistrationForm() {
+export default function StudRegistrationForm() {
   const [department, setDepartment] = useState('');
   const [avatar, setAvatar] = useState('/profile.png');
   const [avatarPreview, setAvatarPreview] = useState('/profile.png');
@@ -109,23 +109,6 @@ export default function DeptRegistrationForm() {
                 </div>
               </div>
 
-              {/* <label>
-                <div className="select">
-                  <Field
-                    as="select"
-                    value={department}
-                    onChange={(e) => setDepartment(e.target.value)}
-                  >
-                    <option value="" disabled hidden>
-                    Select a department
-                    </option>
-                    <option value="department1">Electrical engineering</option>
-                    <option value="department2">Computer engineering</option>
-                  </Field>
-                  <div className="select-arrow"></div>
-                </div>
-              </label>
-      */}
               <div id="registerImage">
                 <img src={avatarPreview} alt="Avatar Preview" />
                 <Field

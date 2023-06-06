@@ -128,14 +128,14 @@ function LoginForm() {
       console.log('Login successful');
       switch (user.role) {
          case 'superadmin':
-            navigate("/super_register");
+            navigate("/admindash");
             break;       
-         case 'faculityhead':
-            navigate("/faculity_register");
-            break;
-          case 'depthead':
-            navigate("/dept_register");
-            break;
+        //  case 'faculityhead':
+        //     navigate("/faculity_register");
+        //     break;
+          // case 'depthead':
+          //   navigate("/dept_register");
+          //   break;
           case 'chair':
             navigate("/chairhome");
             break;

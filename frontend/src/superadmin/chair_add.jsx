@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-export default function TeachRegistrationForm() {
+export default function ChairRegistration() {
   const [department, setDepartment] = useState('');
   const [avatar, setAvatar] = useState('/profile.png');
   const [avatarPreview, setAvatarPreview] = useState('/profile.png');
@@ -58,9 +58,9 @@ export default function TeachRegistrationForm() {
           <div className="form">
             <div className="form-body">
               <div className="header">
-               
-                <p>Welcome , please <b className='head'>Add Teachers</b></p>
-
+                <p>
+                  Welcome, please <b className="head">Add chair holders</b>
+                </p>
               </div>
               <br />
               <div className="enter">
@@ -117,20 +117,22 @@ export default function TeachRegistrationForm() {
                     onChange={(e) => setDepartment(e.target.value)}
                   >
                     <option value="" disabled hidden>
-                    Select a Course
+                      Select a stream
                     </option>
-                    <option value="department1">Java</option>
-                    <option value="department2">OOP</option>
-                    <option value="department3">Database</option>
-                    <option value="department3">Distributed system</option>
-                    <option value="department3">Signal and Analysis</option>
-                    <option value="department3">Embeded Systems</option>
-                    <option value="department3">Software Engineering</option>
+                    <option value="chair1">Communication</option>
+                    <option value="chair2">Power</option>
+                    <option value="chair3">Control</option>
+                    <option value="chair4">production</option>
+                    <option value="chair5">Quality</option>
+                    <option value="chair6">Control</option>
+                    <option value="chair7">Control</option>
+                    <option value="chair8">Control</option>
+
                   </Field>
                   <div className="select-arrow"></div>
                 </div>
               </label>
-     
+
               <div id="registerImage">
                 <img src={avatarPreview} alt="Avatar Preview" />
                 <Field
@@ -151,101 +153,3 @@ export default function TeachRegistrationForm() {
     </Formik>
   );
 }
-
-
-// import React, {useState} from 'react';
-// import '../style/allRegister.css'
-// import { Link } from "react-router-dom";
-
-// // import Footer from './footer';
-
-// // import MetaData from '../more/metadata';
-
-//     // } else {
-//     //   setUser({ ...user, [e.target.name]: e.target.value });
-//     // }
-
-// export default function TeachRegistrationForm() {
-//     const [department, setDepartment] = useState('');
-
-//     const [avatar, setAvatar] = useState("/profile.png");
-//     const [avatarPreview, setAvatarPreview] = useState("/profile.png");
-//   const registerDataChange = (e) => {
-//       if (e.target.name === "avatar") {
-//         const reader = new FileReader();
-  
-//         reader.onload = () => {
-//           if (reader.readyState === 2) {
-//             setAvatarPreview(reader.result);
-//             setAvatar(reader.result);
-//           }
-//         };
-  
-//         reader.readAsDataURL(e.target.files[0]);}
-//           };
-//     return(
-//         <>
-//         {/* <MetaData title="BiT EEMS"/> */}
-
-//       {/* <Header/> */}
-       
-//       <div className="form">
-
-//           <div className="form-body">
-//           <div className="header">
-//             <p>Welcome , please <b className='head'>Add Teachers</b></p>
-//           </div>
-//           <br></br>
-//           <div className='enter'>
-//               <div className="username">
-
-//                   <input className="form__input" type="text" id="firstName" placeholder="Enter Full Name"/>
-//               </div>
-
-//               <div className="email">
-
-//                   <input  type="email" id="email" className="form__input" placeholder="Enter Email"/>
-//               </div>
-
-//               <div className="password">
-
-//                   <input className="form__input" type="password"  id="password" placeholder="Enter Password"/>
-//               </div>
-
-//               <div className="confirm-password">
-//                   <input className="form__input" type="password" id="confirmPassword" placeholder="Confirm Password"/>
-//                   </div>
-//                   </div>  
-
-//             <label>
-//                     <div className='select'>
-//                     <select value={department} onChange={(e) => setDepartment(e.target.value)}>
-//                         <option value="" disabled hidden>Select a Course</option>
-//                         <option value="department1">Java</option>
-//                         <option value="department2">OOP</option>
-//                         <option value="department3">Database</option>
-//                         <option value="department3">Distributed system</option>
-//                         <option value="department3">Signal and Analysis</option>
-//                         <option value="department3">Embeded Systems</option>
-//                         <option value="department3">Software Engineering</option>
-//                     </select>
-
-//                     </div>
-
-//               </label>
-//                   <div id="registerImage">
-//                     <img  src={avatarPreview} alt="Avatar Preview" />
-//                     <input
-//                     type="file"
-//                     name="avatar"
-//                     accept="image/*"
-//                     onChange={registerDataChange}
-//                     />
-//                  </div>  
-//                   <Link className="btn" to="/login/main"> Add </Link>
-
-//               </div>
-//           </div>  
-//       </>
-//     )       
-// }

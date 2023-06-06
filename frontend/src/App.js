@@ -48,31 +48,31 @@ import QuestionForm from './teachers/upload_que.jsx';
 import "./components/Examm/styles/app.css"
 import Exam from "./components/Examm/exam.jsx";
 import { CheckUserExist } from './components/Examm/helper/helper';
-import DeptRegistrationForm from './Dept head/dept_head.jsx';
-import FaculRegistrationForm from './Faculty/facul_head.jsx';
-// import Ch_registrationForm from './stream_chair/register.jsx';
+import DeptRegistrationForm from './superadmin/chair_add.jsx';
+// import FaculRegistration from './Faculty/faculty.jsx';
 import StudRegistrationForm from './stream_chair/addStudent.jsx';
 import TeachRegistrationForm from './stream_chair/addTeachers.jsx';
-// import TeachRegistrationForm from './teachers/register.jsx';
-import SupRegistrationForm from './superadmin/super_register.jsx';
+import SupRegistrationForm from './superadmin/facul_add.jsx';
 import Chairhome from './stream_chair/chairhome.jsx';
-// import RegisterForm from './components/Auth/register.jsx';
 import SelfSuperRegister from './superadmin/selfregister.jsx';
 import ExamForm from './stream_chair/createExam.jsx';
 import QueList from './stream_chair/questionlist.jsx';
 import Studlist from './stream_chair/studlist.jsx';
 import Teachlist from './stream_chair/teachlist.jsx';
+import Admindash from './superadmin/admin_dashboard.jsx';
+import ChairRegistration from './superadmin/chair_add.jsx';
+import FaculRegistration from './superadmin/facul_add.jsx';
+import DeptRegistration from './superadmin/dept_add.jsx';
+import Students from './superadmin/studlist.jsx';
+import Teachers from './superadmin/teachlist.jsx';
+import Chairs from './superadmin/chairs.jsx';
 
 const router = createBrowserRouter([
   {
     path : '/',
     element : <Home></Home>
   },
-  // {
-  //   path : '/register',
-  //   element : <RegisterForm ></RegisterForm>
-  // },
-  {
+{
     path : '/login',
     element : <LoginForm></LoginForm>
   },
@@ -92,26 +92,65 @@ const router = createBrowserRouter([
     path : 'login/teacher',
     element : <QuestionForm></QuestionForm>
   },
+  // {
+  //   path : '/super_register',
+  //   element : <SupRegistrationForm ></SupRegistrationForm>
+  // },
+  // {
+  //   path : '/self_register',
+  //   element : <SelfSuperRegister ></SelfSuperRegister>
+  // },
+  // {
+  //   path : '/faculity_register',
+  //   element : <FaculRegistrationForm ></FaculRegistrationForm>
+  // },
+  // {
+  //   path : '/dept_register',
+  //   element : <DeptRegistrationForm></DeptRegistrationForm>
+  // },
+  
   {
-    path : '/super_register',
-    element : <SupRegistrationForm ></SupRegistrationForm>
+    path : '/admindash',
+    element : <Admindash></Admindash>
   },
-  {
-    path : '/self_register',
-    element : <SelfSuperRegister ></SelfSuperRegister>
-  },
-  {
-    path : '/faculity_register',
-    element : <FaculRegistrationForm ></FaculRegistrationForm>
-  },
-  {
-    path : '/dept_register',
-    element : <DeptRegistrationForm></DeptRegistrationForm>
-  },
+
+  
   {
     path : '/chairhome',
     element : < Chairhome></Chairhome>
   },
+
+// {
+//     path : '',
+//     element : < Chairhome></Chairhome>
+//   },
+  {
+    path : '/admindash/facul_add',
+    element : < FaculRegistration></FaculRegistration>
+  },
+  {
+    path : '/admindash/chair_add',
+    element : <ChairRegistration></ChairRegistration>
+  },
+  {
+    path : '/admindash/dept_add',
+    element : <DeptRegistration></DeptRegistration>
+  },
+  {
+    path : '/admindash/students',
+    element : <Students></Students>
+  },
+  {
+    path : '/admindash/teachers',
+    element : <Teachers></Teachers>
+  },
+  {
+    path : '/admindash/chairs',
+    element : <Chairs></Chairs>
+  },
+
+
+  
   {
     path : '/chairhome/stud_register',
     element : <StudRegistrationForm ></StudRegistrationForm>
@@ -127,15 +166,15 @@ const router = createBrowserRouter([
   },
   {
     path : '/chairhome/list',
-    element : <QueList ></QueList>
+    element : <QueList></QueList>
   },
   {
     path : '/chairhome/listofstud',
-    element : <Studlist ></Studlist>
+    element : <Studlist></Studlist>
   },
   {
     path : '/chairhome/listofteach',
-    element : <Teachlist ></Teachlist>
+    element : <Teachlist></Teachlist>
   },
   ])
 function App() {

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
-export default function DeptRegistrationForm() {
+export default function DeptRegistration() {
   const [department, setDepartment] = useState('');
   const [avatar, setAvatar] = useState('/profile.png');
   const [avatarPreview, setAvatarPreview] = useState('/profile.png');
@@ -25,7 +25,7 @@ export default function DeptRegistrationForm() {
   };
 
   const validationSchema = Yup.object().shape({
-    username: Yup.string().required('Name is required'),
+    username: Yup.string().required('Username is required'),
     email: Yup.string().email('Invalid email').required('Email is required'),
     password: Yup.string().required('Password is required'),
     confirmPassword: Yup.string()
@@ -59,7 +59,7 @@ export default function DeptRegistrationForm() {
             <div className="form-body">
               <div className="header">
                
-                <p>Welcome , please <b className='head'>Add Faculity Heads</b></p>
+                <p>Welcome , please <b className='head'>Add Department</b></p>
 
               </div>
               <br />
@@ -117,14 +117,20 @@ export default function DeptRegistrationForm() {
                     onChange={(e) => setDepartment(e.target.value)}
                   >
                     <option value="" disabled hidden>
-                    Select a Faculity
+                    Select a department
                     </option>
-                    <option value="department1">Electrical and Computer engineering</option>
-                    <option value="department2">computing Faculity</option>
-                    <option value="department2">Mechanical and Industrial Engineering</option>
-                    <option value="department2">Chemical and Food Engineering</option>
-                    <option value="department2">Civil, Hydraulic and Water Engineering</option>
-
+                    <option value="department1">Electrical engineering</option>
+                    <option value="department2">Computer engineering</option>
+                    <option value="department1">Electrical engineering</option>
+                    <option value="department2">Computer engineering</option>  <option value="department1">Electrical engineering</option>
+                    <option value="department2">Computer engineering</option>  <option value="department1">Electrical engineering</option>
+                    <option value="department2">Computer engineering</option>  <option value="department1">Electrical engineering</option>
+                    <option value="department2">Computer engineering</option>  <option value="department1">Electrical engineering</option>
+                    <option value="department2">Computer engineering</option>  <option value="department1">Electrical engineering</option>
+                    <option value="department2">Computer engineering</option>  <option value="department1">Electrical engineering</option>
+                    <option value="department2">Computer engineering</option>  <option value="department1">Electrical engineering</option>
+                    <option value="department2">Computer engineering</option>  <option value="department1">Electrical engineering</option>
+                    <option value="department2">Computer engineering</option>
                   </Field>
                   <div className="select-arrow"></div>
                 </div>
@@ -151,7 +157,6 @@ export default function DeptRegistrationForm() {
   );
 }
 
-
 // import React, {useState} from 'react';
 // import '../style/allRegister.css'
 // import { Link } from "react-router-dom";
@@ -164,7 +169,7 @@ export default function DeptRegistrationForm() {
 //     //   setUser({ ...user, [e.target.name]: e.target.value });
 //     // }
 
-// export default function SupRegistrationForm() {
+// export default function FaculRegistrationForm() {
 //     const [department, setDepartment] = useState('');
 
 //     const [avatar, setAvatar] = useState("/profile.png");
@@ -192,7 +197,7 @@ export default function DeptRegistrationForm() {
 
 //           <div className="form-body">
 //           <div className="header">
-//             <p>Welcome , please <b className='head'>Register Faculity Heads</b></p>
+//             <p>Welcome , please <b className='head'>Add Department Heads</b></p>
 //           </div>
 //           <br></br>
 //           <div className='enter'>
@@ -214,19 +219,17 @@ export default function DeptRegistrationForm() {
 //               <div className="confirm-password">
 //                   <input className="form__input" type="password" id="confirmPassword" placeholder="Confirm Password"/>
 //                   </div>
-//                   </div>  
+                  
+//               </div>
 
 //             <label>
 //                     <div className='select'>
-//                        <select value={department} onChange={(e) => setDepartment(e.target.value)}>
-//                         <option value="" disabled hidden>Select a Faculity</option>
-//                         <option value="department1">Electrical and Computer engineering</option>
-//                         <option value="department2">computing Faculity</option>
-//                         <option value="department2">Mechanical and Industrial Engineering</option>
-//                         <option value="department2">Chemical and Food Engineering</option>
-//                         <option value="department2">Civil, Hydraulic and Water Engineering</option>
-//                    </select>
-//                         {/* <div className="select-arrow"></div> */}
+//                         <select value={department} onChange={(e) => setDepartment(e.target.value)}>
+//                         <option className='select' value="" disabled hidden placeholder='Select a department'>Select a department</option>
+//                         <option value="department1">Electrical engineering</option>
+//                         <option value="department2">Computer engineering</option>
+//                         </select>
+//                         <div className="select-arrow"></div>
 
 //                     </div>
 
@@ -239,11 +242,12 @@ export default function DeptRegistrationForm() {
 //                     accept="image/*"
 //                     onChange={registerDataChange}
 //                     />
-//                 </div>
-//                    <Link className="btn" to="/login/main"> Register </Link>
+//                 </div>  
+//                   <Link className="btn" to="/login/main"> Add </Link>
 
 //               </div>
 //           </div>  
 //       </>
 //     )       
 // }
+

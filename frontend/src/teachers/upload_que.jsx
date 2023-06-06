@@ -148,6 +148,8 @@ const QuestionForm = () => {
 
   const renderOption = (option, index) => {
     return (
+     
+      // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
       <div key={index}>
         <label htmlFor={`option${index + 1}`} className='texts'>Option {index + 1}:</label>
         <select
@@ -188,13 +190,35 @@ const QuestionForm = () => {
       </div>
     );
     
-  
   };
 
   return (
+    <>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
     <div className="question-form-container">
       <form onSubmit={handleSubmit}>
-
+      {/* <label>
+        <div className="select">
+                <Field
+                  as="select"
+                  value={course}
+                  onChange={(e) => setCourse(e.target.value)}
+                  name="course"
+                >
+                  <option value="" disabled hidden>
+                    Select a Course
+                  </option>
+                  {courseOptions &&
+                    courseOptions.map((option) => (
+                      <option key={option._id} value={option.name}>
+                        {option.name}
+                      </option>
+                    ))}
+                </Field>
+           <div className="select-arrow"></div>
+        </div>
+     </label> */}
         <label htmlFor="question" className='texts'>Question:</label>
         <select
           className='type'
@@ -278,10 +302,14 @@ const QuestionForm = () => {
                <td>{question.options[parseInt(question.correctAnswer.charAt(6)) - 1].text}</td>
                    <td></td>
                 <td>
-                  <button onClick={() => handleEditQuestion(index)}>Edit</button>
+                  <button onClick={() => handleEditQuestion(index)}>
+                  <i className="fas fa-edit"></i>
+                  </button>
                 </td>
                 <td>
-                  <button onClick={() => handleDeleteQuestion(index)}>Delete</button>
+                  <button onClick={() => handleDeleteQuestion(index)}>
+                  <i className="fas fa-trash"></i>
+                  </button>
                 </td>
               </tr>
             ))}
@@ -291,6 +319,7 @@ const QuestionForm = () => {
       {questions.length > 0 && <button onClick={handleFormSubmit}>Submit Questions</button>}
 
     </div>
+    </>
   );
 };
 
