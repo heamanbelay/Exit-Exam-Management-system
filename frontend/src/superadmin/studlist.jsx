@@ -200,12 +200,28 @@ const Students = () => {
     setEmail('');
     setDepartment('');
   };
-  const handleToggle = (id) => {
-    setUsers(
-      users.map((user) =>
-        user._id === id ? { ...user, active: !user.active } : user
-      )
-    );
+  // const handleToggle = (user) => {
+  //   setUsers(
+  //     users.map((u) =>
+  //       u._id === user._id ? { ...u, active: !u.active } : u
+  //     )
+  //   );
+  // // };
+  // const handleToggle = (user) => {
+  //   const index = users.findIndex((u) => u._id === user._id);
+  //   if (index !== -1) {
+  //     const updatedUsers = [...users];
+  //     updatedUsers[index] = { ...updatedUsers[index],: !updatedUsers[index].active };
+  //     setUsers(updatedUsers);
+  //   }
+  // };
+  const handleToggle = (user) => {
+    const index = users.findIndex((u) => u._id === user._id);
+    if (index !== -1) {
+      const updatedUsers = [...users];
+      updatedUsers[index] = { ...updatedUsers[index], active: !updatedUsers[index].active };
+      setUsers(updatedUsers);
+    }
   };
   
   return (
@@ -236,7 +252,7 @@ const Students = () => {
              <button onClick={() => handleDelete(user._id)}>
                     <i className="fas fa-trash"></i>
              </button>
-             <button onClick={() => handleToggle(user._id)}>
+             <button onClick={() => handleToggle(user)}>
                 {user.active ? (
                   <i className="fas fa-toggle-on"></i>
                 ) : (

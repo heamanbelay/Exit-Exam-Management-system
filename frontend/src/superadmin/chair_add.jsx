@@ -108,7 +108,28 @@ export default function ChairRegistration() {
                   <ErrorMessage name="confirmPassword" />
                 </div>
               </div>
-
+              <label>
+                <div className="select">
+                  <Field
+                    as="select"
+                    value={department}
+                    onChange={(e) => setDepartment(e.target.value)}
+                  >
+                    <option value="" disabled hidden>
+                    Select a department
+                    </option>
+                    <option value="department1">Electrical engineering</option>
+                    <option value="department2">Computer engineering</option>
+                    <option value="department3">civil engineering</option>
+                    <option value="department4">Mechanical engineering</option>
+                    <option value="department5">Industrial engineering</option>
+                    <option value="department6">Chemical engineering</option>
+                    <option value="department8">Food engineering</option>
+                    <option value="department9">Nutrition engineering</option>
+                  </Field>
+                  <div className="select-arrow"></div>
+                </div>
+              </label>
               <label>
                 <div className="select">
                   <Field
@@ -124,9 +145,7 @@ export default function ChairRegistration() {
                     <option value="chair3">Control</option>
                     <option value="chair4">production</option>
                     <option value="chair5">Quality</option>
-                    <option value="chair6">Control</option>
-                    <option value="chair7">Control</option>
-                    <option value="chair8">Control</option>
+                   
 
                   </Field>
                   <div className="select-arrow"></div>

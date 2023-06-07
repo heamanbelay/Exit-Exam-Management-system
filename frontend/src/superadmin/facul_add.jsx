@@ -6,38 +6,18 @@ import * as Yup from 'yup';
 
 export default function FaculRegistration() {
   const [department, setDepartment] = useState('');
-  const [avatar, setAvatar] = useState('/profile.png');
-  const [avatarPreview, setAvatarPreview] = useState('/profile.png');
 
-  const registerDataChange = (e) => {
-    if (e.target.name === 'avatar') {
-      const reader = new FileReader();
-
-      reader.onload = () => {
-        if (reader.readyState === 2) {
-          setAvatarPreview(reader.result);
-          setAvatar(reader.result);
-        }
-      };
-
-      reader.readAsDataURL(e.target.files[0]);
-    }
-  };
-
-  const validationSchema = Yup.object().shape({
-    username: Yup.string().required('Name is required'),
-    email: Yup.string().email('Invalid email').required('Email is required'),
-    password: Yup.string().required('Password is required'),
-    confirmPassword: Yup.string()
-      .oneOf([Yup.ref('password'), null], 'Passwords must match')
-      .required('Confirm Password is required'),
-  });
+  // const validationSchema = Yup.object().shape({
+  //   username: Yup.string().required('Name is required'),
+  //   email: Yup.string().email('Invalid email').required('Email is required'),
+  //   password: Yup.string().required('Password is required'),
+  //   confirmPassword: Yup.string()
+  //   .oneOf([Yup.ref('password'), null], 'Passwords must match')
+  //   .required('Confirm Password is required'),
+  // });
 
   const initialValues = {
-    username: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
+    FacultyName: '',
   };
 
   const handleSubmit = (values, { setSubmitting }) => {
@@ -50,7 +30,7 @@ export default function FaculRegistration() {
   return (
     <Formik
       initialValues={initialValues}
-      validationSchema={validationSchema}
+      // validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
       {({ isSubmitting }) => (
@@ -63,51 +43,6 @@ export default function FaculRegistration() {
 
               </div>
               <br />
-              <div className="enter">
-                <div className="username">
-                  <Field
-                    className="form__input"
-                    type="text"
-                    id="username"
-                    placeholder="Enter Full Name"
-                    name="username"
-                  />
-                  <ErrorMessage name="username" />
-                </div>
-
-                <div className="email">
-                  <Field
-                    type="email"
-                    id="email"
-                    className="form__input"
-                    placeholder="Enter Email"
-                    name="email"
-                  />
-                  <ErrorMessage name="email" />
-                </div>
-
-                <div className="password">
-                  <Field
-                    className="form__input"
-                    type="password"
-                    id="password"
-                    placeholder="Enter Password"
-                    name="password"
-                  />
-                  <ErrorMessage name="password" />
-                </div>
-
-                <div className="confirm-password">
-                  <Field
-                    className="form__input"
-                    type="password"
-                    id="confirmPassword"
-                    placeholder="Confirm Password"
-                    name="confirmPassword"
-                  />
-                  <ErrorMessage name="confirmPassword" />
-                </div>
-              </div>
 
               <label>
                 <div className="select">
@@ -117,7 +52,7 @@ export default function FaculRegistration() {
                     onChange={(e) => setDepartment(e.target.value)}
                   >
                     <option value="" disabled hidden>
-                    Select a Faculity
+                   --- Select a Faculity ---
                     </option>
                     <option value="department1">Electrical and Computer engineering</option>
                     <option value="department2">computing Faculity</option>
@@ -130,15 +65,7 @@ export default function FaculRegistration() {
                 </div>
               </label>
      
-              <div id="registerImage">
-                <img src={avatarPreview} alt="Avatar Preview" />
-                <Field
-                  type="file"
-                  name="avatar"
-                  accept="image/*"
-                  onChange={registerDataChange}
-                />
-              </div>
+           
 
               <button type="submit" className="btn" disabled={isSubmitting}>
                 Add
