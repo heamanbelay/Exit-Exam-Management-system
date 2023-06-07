@@ -123,7 +123,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './editlist.css'
+import '../style/editlist.css'
 const Students = () => {
   const [users, setUsers] = useState([]);
   const [editingUser, setEditingUser] = useState(null);
@@ -215,17 +215,18 @@ const Students = () => {
   //     setUsers(updatedUsers);
   //   }
   // };
-  const handleToggle = (user) => {
-    const index = users.findIndex((u) => u._id === user._id);
-    if (index !== -1) {
-      const updatedUsers = [...users];
-      updatedUsers[index] = { ...updatedUsers[index], active: !updatedUsers[index].active };
-      setUsers(updatedUsers);
-    }
-  };
+  // const handleToggle = (user) => {
+  //   const index = users.findIndex((u) => u._id === user._id);
+  //   if (index !== -1) {
+  //     const updatedUsers = [...users];
+  //     updatedUsers[index] = { ...updatedUsers[index], active: !updatedUsers[index].active };
+  //     setUsers(updatedUsers);
+  //   }
+  // };
   
   return (
     <>
+        <h2>This is the List of Students</h2>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <table>
       <thead>
@@ -252,13 +253,13 @@ const Students = () => {
              <button onClick={() => handleDelete(user._id)}>
                     <i className="fas fa-trash"></i>
              </button>
-             <button onClick={() => handleToggle(user)}>
+             {/* <button onClick={() => handleToggle(user)}>
                 {user.active ? (
                   <i className="fas fa-toggle-on"></i>
                 ) : (
                   <i className="fas fa-toggle-off"></i>
                 )}
-              </button>
+              </button> */}
                 </>
               )}
             </td>
@@ -282,17 +283,18 @@ const Students = () => {
                 </div>
               </div>
               <div className="field">
-                <label className="label">Department</label>
-                <div className="control">
-                  <input className="input" type="text" value={department} onChange={(e) => setDepartment(e.target.value)} />
-                </div>
-              </div>
-              <div className="field">
                 <label className="label">Email</label>
                 <div className="control">
                   <input className="input" type="text" value={email} onChange={(e) => setEmail(e.target.value)} />
                 </div>
               </div>
+              <div className="field">
+                <label className="label">Department</label>
+                <div className="control">
+                  <input className="input" type="text" value={department} onChange={(e) => setDepartment(e.target.value)} />
+                </div>
+              </div>
+            
             </section>
             <footer className="modal-card-foot">
               <button className="button is-success" onClick={handleSave}>Save changes</button>
