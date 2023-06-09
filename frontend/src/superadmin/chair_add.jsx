@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../style/allRegister.css';
+import '../style/chair.css';
 import { Link } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';

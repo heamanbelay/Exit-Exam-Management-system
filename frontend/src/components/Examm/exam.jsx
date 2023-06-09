@@ -4,8 +4,9 @@ import { useSelector, useDispatch } from 'react-redux'
 import { Navigate } from 'react-router-dom'
 import { MoveNextQuestion, movePrevQuestion } from './hooks/FetchQuestion.jsx' 
 import { PushAnswer } from './hooks/setResult.jsx'
+// import { useHistory } from 'react-router-dom'
 
-export default function Exam() {
+export default function Exam(props) {
 
   const state = useSelector(state => state);
   const result = useSelector(state => state.result.result);
@@ -15,6 +16,7 @@ export default function Exam() {
   const [duration, setDuration] = useState(10); // 5 minutes
   const [time, setTime] = useState(duration);
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
+  // const history = useHistory();
 
           useEffect(() => {
             console.log(state)
@@ -30,11 +32,13 @@ export default function Exam() {
 
           useEffect(() => {
             if (time === 0) {
+              props.history.replace('./result');
+
               // Time is up, navigate to the result page
-              return<Navigate to='./result' replace="true"></Navigate>
+              // return<Navigate to='./result' replace="true"></Navigate>
               // dispatch(Navigate('./result'));
             }
-          }, [time]);
+          }, [time,  props.history]);
 
   function onNext(){
     console.log('next button pressed')
@@ -64,7 +68,7 @@ export default function Exam() {
     setChecked(check)
   }
   if(result.length && result.length >= queue.length){
-    return<Navigate to='./result' replace="true"></Navigate>
+    props.history.replace('./result');
   }
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
@@ -94,7 +98,6 @@ export default function Exam() {
     
   )
 }
-// The code you provided has a few issues that need to be fixed:
 
 // import React, { useEffect } from 'react'
 // import Questions from './questions.jsx'

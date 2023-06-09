@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import  '../style/chair.css'
+import ExamForm from './createExam';
 import QuestionForm from '../teachers/upload_que';
 import ListofUsers from './listofusers';
 import QuestionTable from '../teachers/quetable';
@@ -36,7 +37,7 @@ const Chairhome = () => {
     <div className="sidebar">
       <div className="sidebarWrapper">
         <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Stream Chair Dashboard</h3>
+          <h3 className="sidebarTitle"> Chairperson Dashboard</h3>
           <ul className="sidebarList">
             <Link to="/" className="link">
             <li className="sidebarListItem active">
@@ -85,11 +86,12 @@ const Chairhome = () => {
       </div>
     </div>
     {/* <ListofUsers/> */}
+    <ExamForm/>
 
     </div>
     </div>
+
     </>   
-
   );
 }
 export default Chairhome

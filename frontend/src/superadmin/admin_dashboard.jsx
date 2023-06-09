@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
+import Students from './studlist';
 import  '../style/chair.css'
 import { Visibility } from "@material-ui/icons";
 import {
@@ -81,7 +82,7 @@ const Admindash = () => {
         </div>
       </div>
     </div>
-    {/* <ListofUsers/> */}
+   <Students/> 
 
     </div>
     </div>

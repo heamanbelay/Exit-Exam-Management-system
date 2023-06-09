@@ -1,6 +1,6 @@
 .form {
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   max-width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -10,25 +10,43 @@
   background-position: left;
   background-position-x: 5%;
   background-size: 88vh;
-  position: fixed;
+  position: absolute;
   top: 10%;
   left: 0;
+  bottom: 120%;
+  right: 0;
   margin: auto;
   margin-top: -3%;
 }
+@media (min-height: 600px) {
+  .form {
+    bottom: 50px;
+  }
+}
 
+@media (min-height: 800px) {
+  .form {
+    bottom: 100px;
+  }
+}
+
+@media (min-height: 1000px) {
+  .form {
+    bottom: 150px;
+  }
+}
 .form-body {
   text-align: left;
   padding: 20px 20px;
   border: 2px solid #0000001a;
   padding: 10px;
   margin-right: 17%;
-  margin-top: -7%;
+  margin-top: -1%;
   left: 0;
   width: 30vw;
-  height: 90vh;
+  height: 110vh;
   background-size: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   box-shadow: 15px 15px 15px rgba(219, 213, 213, 0.2), 
     -15px 15px 15px rgba(0,0,0,0.1);
   border-radius: 10px;

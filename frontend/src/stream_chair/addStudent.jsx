@@ -108,7 +108,28 @@ export default function StudRegistrationForm() {
                   <ErrorMessage name="confirmPassword" />
                 </div>
               </div>
-
+              <label>
+                <div className="select">
+                  <Field
+                    as="select"
+                    value={department}
+                    onChange={(e) => setDepartment(e.target.value)}
+                  >
+                    <option value="" disabled hidden>
+                    Select a department
+                    </option>
+                    <option value="department1">Electrical engineering</option>
+                    <option value="department2">Computer engineering</option>
+                    <option value="department3">civil engineering</option>
+                    <option value="department4">Mechanical engineering</option>
+                    <option value="department5">Industrial engineering</option>
+                    <option value="department6">Chemical engineering</option>
+                    <option value="department8">Food engineering</option>
+                    <option value="department9">Nutrition engineering</option>
+                  </Field>
+                  <div className="select-arrow"></div>
+                </div>
+              </label>
               <div id="registerImage">
                 <img src={avatarPreview} alt="Avatar Preview" />
                 <Field

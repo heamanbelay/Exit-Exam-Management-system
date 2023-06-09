@@ -113,8 +113,6 @@ const router = createBrowserRouter([
     path : '/admindash',
     element : <Admindash></Admindash>
   },
-
-  
   {
     path : '/chairhome',
     element : < Chairhome></Chairhome>
@@ -148,8 +146,6 @@ const router = createBrowserRouter([
     path : '/admindash/chairs',
     element : <Chairs></Chairs>
   },
-
-
   
   {
     path : '/chairhome/stud_register',
@@ -184,6 +180,7 @@ function App() {
       <RouterProvider router={router} />
     </>
   );
+  
 }
 export default App;
 

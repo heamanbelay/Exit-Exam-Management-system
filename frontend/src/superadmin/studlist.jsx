@@ -226,13 +226,12 @@ const Students = () => {
   
   return (
     <>
-        <h2>This is the List of Students</h2>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <table>
       <thead>
         <tr>
           <th>#</th>
-          <th>Name</th>      
+          <th>Student Name</th>      
           <th>Email</th>
           <th>Department</th>
         </tr>

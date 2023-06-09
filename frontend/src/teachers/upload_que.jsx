@@ -93,64 +93,14 @@ const QuestionForm = () => {
       setQuestions(questions.filter((_, i) => i !== index));
     }
   };
-//   axios.post('/api/questions', {
-//     question: 'What is your favorite color?',
-//     answer: 'My favorite color is blue.'
-//   })
-//   .then(function(response) {
-//     console.log(response.data);
-//   })
-//   .catch(function(error) {
-//     console.log(error);
-//   });
-//   const handleFormSubmit = () => {
-//       // Send the questions to the chairperson's page
-//       fetch('https://localhost:3000/api/questions', {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json'
-//         },
-//         body: JSON.stringify(questions)
-//       })
-//       .then(response => {
-//         if (response.ok) {
-//           // Handle success
-//           console.log('Questions submitted successfully');
-//         } else {
-//           // Handle error
-//           console.error('Error submitting questions');
-//         }
-//       })
-//       .catch(error => {
-//         // Handle error
-//         console.error('Error submitting questions', error);
-// });
-// };
+
  const handleFormSubmit = () => {
-      // Get the values of the question and answer input fields
-      // var question = document.getElementById("question").value;
-      // var answer = document.getElementById("answer").value;
-
-//       var question = document.querySelector("#question").value;
-//       var answer = document.querySelector("#answer").value;
-
-//       // Add the question to the list of questions
-//       var questionList = document.querySelector("questionList");
-//       var newQuestion = document.createElement("li");
-//       newQuestion.innerHTML = "<strong>Question:</strong> " + question + "<br><strong>Answer:</strong> " + answer;
-//       questionList.appendChild(newQuestion);
-
-//       // Clear the input fields
-//       document.querySelector("#question").value = "";
-//       document.querySelector("#answer").value = "";
     
  }
 
   const renderOption = (option, index) => {
     return (
-     
-      // <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-      <div key={index}>
+           <div key={index}>
         <label htmlFor={`option${index + 1}`} className='texts'>Option {index + 1}:</label>
         <select
           className='type'
@@ -160,9 +110,8 @@ const QuestionForm = () => {
             handleOptionTypeChange(index, e.target.value === 'image')
           }
         >
-          <option value="text">Text</option>
-          <option value="image">Image URL</option>
-          <option value="both">Both</option>
+          <option value="text">--Text--</option>
+          <option value="image">--Image URL--</option>
         </select>
         {option.isImage ? (
           <div>
@@ -265,7 +214,7 @@ const QuestionForm = () => {
         </select>
         {formErrors.correctAnswer && <div className="error">{formErrors.correctAnswer}</div>}
         <br />
-        <button type="submit">Add Question</button>
+        <button type="submit" className='btn'>Add Question</button>
       </form>
       <hr />
       <h2>Added Questions</h2>
@@ -316,7 +265,7 @@ const QuestionForm = () => {
           </tbody>
         </table>
       )}
-      {questions.length > 0 && <button onClick={handleFormSubmit}>Submit Questions</button>}
+      {questions.length > 0 && <button onClick={handleFormSubmit} className='btn'>Submit Questions</button>}
 
     </div>
     </>

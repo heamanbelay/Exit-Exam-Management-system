@@ -66,19 +66,16 @@ return (
                     <ErrorMessage name="marksPerRightAnswer" className="form-text text-danger" />
                 </div>
                 
-                {/* <div className="mb-3">
-                    <label htmlFor="studentId" className="form-label">Student ID</label>
-                    <Field type="text" className="form-control" id="studentId" name="studentId" />
-                    <ErrorMessage name="studentId" className="form-text text-danger" />
-                </div> */}
+            
+               
                 <div className="mb-3">
-                    <label htmlFor="startTime" className="form-label">Start Time</label>
+                    <label htmlFor="startTime" className="form-label">Duration</label>
                     <Field type="datetime-local" className="form-control" id="startTime" name="startTime" />
                     <ErrorMessage name="startTime" className="form-text text-danger" />
                 </div>
 
                 <div className="mb-3">
-                    <label htmlFor="endTime" className="form-label">Duration</label>
+                    <label htmlFor="endTime" className="form-label"></label>
                     <Field type="datetime-local" className="form-control" id="endTime" name="endTime" />
                     <ErrorMessage name="endTime" className="form-text text-danger" />
                 </div>

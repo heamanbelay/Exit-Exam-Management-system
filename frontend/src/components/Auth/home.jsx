@@ -9,7 +9,6 @@ const Home = ({ role, features }) => {
     <Header/>
 
     <div>
-      <h2>Welcome, {role}!</h2>
       {features && features.includes('dashboard') && (
         <div>
           <h3>Dashboard</h3>
@@ -28,6 +27,7 @@ const Home = ({ role, features }) => {
           <p>This is the reports page.</p>
         </div>
       )}
+     <Footer/>
     </div>
     </>
  
