@@ -55,7 +55,7 @@ import TeachRegistrationForm from './stream_chair/addTeachers.jsx';
 import SupRegistrationForm from './superadmin/facul_add.jsx';
 import Chairhome from './stream_chair/chairhome.jsx';
 import SelfSuperRegister from './superadmin/selfregister.jsx';
-import ExamForm from './stream_chair/createExam.jsx';
+import ExamForm from './stream_chair/Examsession.jsx';
 import QueList from './stream_chair/questionlist.jsx';
 import Studlist from './stream_chair/studlist.jsx';
 import Teachlist from './stream_chair/teachlist.jsx';
@@ -66,7 +66,8 @@ import DeptRegistration from './superadmin/dept_add.jsx';
 import Students from './superadmin/studlist.jsx';
 import Teachers from './superadmin/teachlist.jsx';
 import Chairs from './superadmin/chairs.jsx';
-
+import CreatExam from './stream_chair/creatExam.jsx';
+import Course from './superadmin/addcourse.jsx';
 const router = createBrowserRouter([
   {
     path : '/',
@@ -146,7 +147,10 @@ const router = createBrowserRouter([
     path : '/admindash/chairs',
     element : <Chairs></Chairs>
   },
-  
+  {
+    path : '/admindash/course',
+    element : <Course></Course>
+  },
   {
     path : '/chairhome/stud_register',
     element : <StudRegistrationForm ></StudRegistrationForm>
@@ -157,8 +161,8 @@ const router = createBrowserRouter([
   },
  
   {
-    path : '/chairhome/examform',
-    element : <ExamForm ></ExamForm>
+    path : '/chairhome/createexam',
+    element : <CreatExam ></CreatExam>
   },
   {
     path : '/chairhome/list',

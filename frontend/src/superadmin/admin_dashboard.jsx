@@ -24,8 +24,20 @@ const Admindash = () => {
   return (
     <>   
 
-    {/* <Header/> */}
-
+<div className="profile_container">
+        <div className="image_container">
+          <img
+            src=""
+            alt=""
+            className="student_image"
+          />
+        </div>
+        <div className="data_container">
+          <span className="">Name: Abebe Kebede</span>
+          <span className="">Id: 11031234</span>
+          <Link className='logout'>Log out</Link>
+        </div>
+      </div>
     <div className="home">
     {/* <FeaturedInfo /> */}
     <div className="homeWidgets">
@@ -60,6 +72,12 @@ const Admindash = () => {
               </li>
             </Link>
             
+            <Link to="/admindash/course" className="link">
+              <li className="sidebarListItem">
+                <PermIdentity className="sidebarIcon" />
+                 Add Courses
+              </li>
+            </Link>
             <Link to="/admindash/chairs" className="link">
             <li className="sidebarListItem">
             <Visibility className="widgetSmIcon" />

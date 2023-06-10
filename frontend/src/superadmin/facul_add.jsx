@@ -5,7 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 export default function FaculRegistration() {
-  const [department, setDepartment] = useState('');
+  const [faculty, setFaculty] = useState('');
 
   // const validationSchema = Yup.object().shape({
   //   username: Yup.string().required('Name is required'),
@@ -22,7 +22,9 @@ export default function FaculRegistration() {
 
   const handleSubmit = (values, { setSubmitting }) => {
     setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
+      // alert(JSON.stringify(values, null, 2));
+      alert('Faculty added successfully!'); 
+
       setSubmitting(false);
     }, 400);
   };
@@ -48,8 +50,8 @@ export default function FaculRegistration() {
                 <div className="select">
                   <Field
                     as="select"
-                    value={department}
-                    onChange={(e) => setDepartment(e.target.value)}
+                    value={faculty}
+                    onChange={(e) => setFaculty(e.target.value)}
                   >
                     <option value="" disabled hidden>
                    --- Select a Faculity ---

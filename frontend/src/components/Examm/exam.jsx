@@ -13,7 +13,7 @@ export default function Exam(props) {
   const { queue, trace } = useSelector(state => state.questions);
   const dispatch = useDispatch()
   const [check, setChecked ] = useState()
-  const [duration, setDuration] = useState(25); // 5 minutes
+  const [duration, setDuration] = useState(10); // 5 minutes
   const [time, setTime] = useState(duration);
   const [answeredQuestions, setAnsweredQuestions] = useState([]);
   // const history = useHistory();
@@ -40,40 +40,20 @@ export default function Exam(props) {
             }
           }, [time,  props.history]);
 
-
-    function onNext() {
-      console.log('next button pressed');
-      if (trace < queue.length) {
-        dispatch(MoveNextQuestion());
-    
-        // insert a new result on the array only if the answer is selected
-        if (check !== undefined) {
-          if (result.length <= trace) {
-            dispatch(PushAnswer(check));
-            setAnsweredQuestions([...answeredQuestions, trace]);
-          }
-        } else {
-          setAnsweredQuestions([...answeredQuestions]);
-        }
-    
-        setChecked(undefined);
-      }
-    
-    // console.log('next button pressed')
-    // if(trace < queue.length){
-    //   dispatch(MoveNextQuestion())
+  function onNext(){
+    console.log('next button pressed')
+    if(trace < queue.length){
+      dispatch(MoveNextQuestion())
 
 // insert a new result on the array
 
-      // if(result.length <= trace){
-      //   dispatch(PushAnswer(check))
-      //   setAnsweredQuestions([...answeredQuestions, trace]);       }
-      //  setChecked(undefined);
+      if(result.length <= trace){
+        dispatch(PushAnswer(check))
+        setAnsweredQuestions([...answeredQuestions, trace]);       }
+       setChecked(undefined);
 
     }
-    function handleQuestionClick(index) {
-      dispatch({ type: 'SET_TRACE', payload: index });
-    }
+  }
   function onPrev(){
     console.log('previous button pressed')
     if (trace > 0){
@@ -108,7 +88,7 @@ export default function Exam(props) {
           <button
             key={index}
             className={`question-button ${answeredQuestions.includes(index) ? 'answered' : ''}`}
-            onClick={() =>handleQuestionClick (index) }
+            onClick={() => dispatch({ type: 'SET_TRACE', payload: index })}
           >
             {index + 1}
           </button>

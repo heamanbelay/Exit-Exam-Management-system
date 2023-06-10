@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import { Link } from "react-router-dom";
 import  '../style/chair.css'
-import ExamForm from './createExam';
+import ExamForm from './Examsession';
 import QuestionForm from '../teachers/upload_que';
 import ListofUsers from './listofusers';
 import QuestionTable from '../teachers/quetable';
@@ -28,7 +28,6 @@ const Chairhome = () => {
   
   return (
     <>   
-  <div className='container'>
   <div className="profile_container">
     <div className="image_container">
           <img
@@ -39,10 +38,9 @@ const Chairhome = () => {
         </div>
         <div className="data_container">
           <span className="">Name: Abebe Kebede</span>
-          <span className="">Id: 11031234</span>
+          <span className="">Department: COED</span>
           <Link className='logout'>Log out</Link>
         </div>
-      </div>
       </div>
 
     <div className="home">
@@ -77,10 +75,10 @@ const Chairhome = () => {
                   List of Added Questions            
                </li>
             </Link>
-            <Link to="/chairhome/examform" className="link">
+            <Link to="/chairhome/createexam" className="link">
             <li className="sidebarListItem">
               <Storefront className="sidebarIcon" />
-              Set Exam
+              create Exam
             </li>
             </Link>
             <Link to="/chairhome/listofteach" className="link">

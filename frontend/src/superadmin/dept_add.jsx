@@ -6,7 +6,9 @@ import * as Yup from 'yup';
 
 export default function DeptRegistration() {
   const [department, setDepartment] = useState('');
- 
+  const [faculty, setFaculty] = useState('');
+
+  
   // const validationSchema = Yup.object().shape({
   //   username: Yup.string().required('Username is required'),
   //   email: Yup.string().email('Invalid email').required('Email is required'),
@@ -24,7 +26,8 @@ export default function DeptRegistration() {
 
   const handleSubmit = (values, { setSubmitting }) => {
     setTimeout(() => {
-      alert(JSON.stringify(values, null, 2));
+      alert('Department added successfully!'); 
+      // alert(JSON.stringify(values, null, 2));
       setSubmitting(false);
     }, 400);
   };
@@ -50,17 +53,17 @@ export default function DeptRegistration() {
                 <div className="select">
                   <Field
                     as="select"
-                    value={department}
-                    onChange={(e) => setDepartment(e.target.value)}
+                    value={faculty}
+                    onChange={(e) => setFaculty(e.target.value)}
                   >
                     <option value="" disabled hidden>
                     --- Select a Faculty ---
                     </option>
-                    <option value="department1">Electrical and Computer engineering</option>
-                    <option value="department2">computing Faculity</option>
-                    <option value="department3">Mechanical and Industrial Engineering</option>
-                    <option value="department4">Chemical and Food Engineering</option>
-                    <option value="department5">Civil, Hydraulic and Water Engineering</option>
+                    <option value="faulty1">Electrical and Computer engineering</option>
+                    <option value="faulty2">computing Faculity</option>
+                    <option value="faulty3">Mechanical and Industrial Engineering</option>
+                    <option value="faulty4">Chemical and Food Engineering</option>
+                    <option value="faulty5">Civil, Hydraulic and Water Engineering</option>
 
                   </Field>
                   <div className="select-arrow"></div>

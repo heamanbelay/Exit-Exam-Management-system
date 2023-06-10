@@ -47,7 +47,7 @@ return (
             {({ isSubmitting }) => (
         <Form>
                 
-              
+              <div><h2>Set an exam here</h2></div>
                 <div className="mb-3">
                     <label htmlFor="duration" className="form-label">Total Questions</label>
                     <Field type="number" className="form-control" id="totqns" name="totqns" min="1" />
@@ -65,9 +65,9 @@ return (
                     <ErrorMessage name="marks" className="form-text text-danger" />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="examId" className="form-label">Department Id</label>
-                    <Field type="text" className="form-control" id="deptid" name="deptid" />
-                    <ErrorMessage name="deptid" className="form-text text-danger" />
+                    <label htmlFor="examId" className="form-label">Department</label>
+                    <Field type="text" className="form-control" id="dept" name="dept" />
+                    <ErrorMessage name="dept" className="form-text text-danger" />
                 </div>
                
                 <div className="mb-3">
@@ -82,10 +82,26 @@ return (
                     <ErrorMessage name="endTime" className="form-text text-danger" />
                 </div>
                 <div className="mb-3">
+                    <label htmlFor="activateExam" className="form-label">Activate Exam</label>
+                    <div className="form-toggle">
+                        <Field type="checkbox" className="form-check-input" id="activateExam" name="activateExam" />
+                        <label className="toggle-switch" htmlFor="activateExam"></label>
+                    </div>
+                    <ErrorMessage name="activateExam" className="form-text text-danger" />
+                </div>
+                {/* <div className="mb-3">
+                    <label htmlFor="activateExam" className="form-label">Activate Exam</label>
+                    <div className="form-check">
+                        <Field type="checkbox" className="form-check-input" id="activateExam" name="activateExam" />
+                        <label className="form-check-label" htmlFor="activateExam">Activate Exam</label>
+                    </div>
+                    <ErrorMessage name="activateExam" className="form-text text-danger" />
+                </div> */}
+                {/* <div className="mb-3">
                     <label htmlFor="totalMarks" className="form-label">Activate Exam</label>
                     <Field type="number" className="form-control" id="totalMarks" name="totalMarks" />
                     <ErrorMessage name="totalMarks" className="form-text text-danger" />
-                </div>
+                </div> */}
                     <button type="submit" className="btn btn-primary" disabled={isSubmitting}>Set Exam</button>
       </Form>
             )}
