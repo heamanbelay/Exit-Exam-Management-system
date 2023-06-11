@@ -21,34 +21,32 @@ import {
 const Admindash = () => {
     const [questions, setQuestions] = useState([]);
     const [showProfile, setShowProfile] = useState(false);
+    const toggleProfile = () => {
+    setShowProfile(!showProfile);
+  };
   return (
     <>   
- <div>
-      <Link 
-        to="/"
-        onMouseEnter={() => setShowProfile(true)}
-        onMouseLeave={() => setShowProfile(false)}
-        className='view'>
+    <div>
+      <button onClick={toggleProfile} className='view'>
         View Profile
-      </Link>
-      
+      </button>
       {showProfile && (
-      <div className="profile_container">
-        <div className="image_container">
-          <img
-            src=""
-            alt=""
-            className="student_image"
-          />
+        <div className="profile_container">
+          <div className="image_container">
+            <img
+              src=""
+              alt=""
+              className="student_image"
+            />
+          </div>
+          <div className="data_container">
+            <span className="">Name: Abebe Kebede</span>
+            <span className="">Id: 11031234</span>
+            <Link className='logout'>Log out</Link>
+          </div>
         </div>
-        <div className="data_container">
-          <span className="">Name: Abebe Kebede</span>
-          <span className="">Id: 11031234</span>
-          <Link className='logout'>Log out</Link>
-        </div>
-      </div>
-            )}
-      </div>
+      )}
+    </div>
 
 
     <div className="home">
