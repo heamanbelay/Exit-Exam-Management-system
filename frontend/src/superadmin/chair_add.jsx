@@ -8,6 +8,7 @@ export default function ChairRegistration() {
   const [department, setDepartment] = useState('');
   const [avatar, setAvatar] = useState('/profile.png');
   const [avatarPreview, setAvatarPreview] = useState('/profile.png');
+  const [chair, setChair] = useState('');
 
   const registerDataChange = (e) => {
     if (e.target.name === 'avatar') {
@@ -116,7 +117,7 @@ export default function ChairRegistration() {
                     onChange={(e) => setDepartment(e.target.value)}
                   >
                     <option value="" disabled hidden>
-                    Select a department
+                    --- Select a department ---
                     </option>
                     <option value="department1">Electrical engineering</option>
                     <option value="department2">Computer engineering</option>
@@ -134,11 +135,11 @@ export default function ChairRegistration() {
                 <div className="select">
                   <Field
                     as="select"
-                    value={department}
-                    onChange={(e) => setDepartment(e.target.value)}
+                    value={chair}
+                    onChange={(e) => setChair(e.target.value)}
                   >
                     <option value="" disabled hidden>
-                      Select a stream
+                     --- Select a stream ---
                     </option>
                     <option value="chair1">Communication</option>
                     <option value="chair2">Power</option>

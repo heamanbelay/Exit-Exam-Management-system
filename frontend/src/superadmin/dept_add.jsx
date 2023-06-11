@@ -53,7 +53,7 @@ export default function DeptRegistration() {
                 <div className="select">
                   <Field
                     as="select"
-                    value={faculty}
+                    value={department}
                     onChange={(e) => setFaculty(e.target.value)}
                   >
                     <option value="" disabled hidden>

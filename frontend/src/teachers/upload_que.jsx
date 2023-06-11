@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './QuestionForm.css';
+import { Link } from "react-router-dom";
 
 // import axios from "axios";
 const QuestionForm = () => {
@@ -13,6 +14,7 @@ const QuestionForm = () => {
   const [correctAnswer, setCorrectAnswer] = useState('');
   const [formErrors, setFormErrors] = useState({});
   const [questions, setQuestions] = useState([]);
+  const [showProfile, setShowProfile] = useState(false);
 
   useEffect(() => {
     console.log(questions);
@@ -100,6 +102,7 @@ const QuestionForm = () => {
 
   const renderOption = (option, index) => {
     return (
+      
            <div key={index}>
         <label htmlFor={`option${index + 1}`} className='texts'>Option {index + 1}:</label>
         <select
@@ -144,6 +147,32 @@ const QuestionForm = () => {
   return (
     <>
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+          <div>
+      <Link 
+        to="/"
+        onMouseEnter={() => setShowProfile(true)}
+        onMouseLeave={() => setShowProfile(false)}
+        className='view'>
+        View Profile
+      </Link>
+      
+      {showProfile && (
+      <div className="profile_container">
+        <div className="image_container">
+          <img
+            src=""
+            alt=""
+            className="student_image"
+          />
+        </div>
+        <div className="data_container">
+          <span className="">Name: Abebe Kebede</span>
+          <span className="">Id: 11031234</span>
+          <Link className='logout'>Log out</Link>
+        </div>
+      </div>
+            )}
+      </div>
 
     <div className="question-form-container">
       <form onSubmit={handleSubmit}>

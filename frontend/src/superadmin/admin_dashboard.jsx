@@ -20,11 +20,20 @@ import {
 
 const Admindash = () => {
     const [questions, setQuestions] = useState([]);
-  
+    const [showProfile, setShowProfile] = useState(false);
   return (
     <>   
-
-<div className="profile_container">
+ <div>
+      <Link 
+        to="/"
+        onMouseEnter={() => setShowProfile(true)}
+        onMouseLeave={() => setShowProfile(false)}
+        className='view'>
+        View Profile
+      </Link>
+      
+      {showProfile && (
+      <div className="profile_container">
         <div className="image_container">
           <img
             src=""
@@ -38,6 +47,10 @@ const Admindash = () => {
           <Link className='logout'>Log out</Link>
         </div>
       </div>
+            )}
+      </div>
+
+
     <div className="home">
     {/* <FeaturedInfo /> */}
     <div className="homeWidgets">
