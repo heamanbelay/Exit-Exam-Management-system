@@ -1,4 +1,4 @@
 ﻿# Exit-Exam-Management-system
- Our system leverages modern technologies like MERN stack to provide a seamless and accurate exam experience for candidates. The main methodology we used in developing this system is waterfall model which we were engaged in requirement gathering, analysis and designing, coding, testing, then finally deployment and maintenance.
+This system leverages modern technologies like MERN stack to provide a seamless and accurate exam experience for candidates. The main methodology we used in developing this system is waterfall model which we were engaged in requirement gathering, analysis and designing, coding, testing, then finally deployment and maintenance.
 
 After walking through all the process, we present a comprehensive and standalone software solution for automating and streamlining the exit exam management system for BiT. The system includes features such as online exam creation and scheduling, automated grading, administration, authorized registrations, also secured and safe with additional validation functionalities like shuffling questions everytime student logs in to take the exam in order to minimize cheating in exam. 
